@@ -17,9 +17,9 @@ namespace MessengerToolWpfApp.Views
     /// <summary>
     /// Interaction logic for RegisterView.xaml
     /// </summary>
-    public partial class RegisterView : Window
+    public partial class RegisterWindow : Window
     {
-        public RegisterView()
+        public RegisterWindow()
         {
             InitializeComponent();
         }
