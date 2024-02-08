@@ -23,5 +23,10 @@ namespace MessengerToolWpfApp.Views
         {
             InitializeComponent();
         }
+
+        private void MessageInput_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -15,7 +15,7 @@ if (!messengerDb.getRole("customRole")) {
     privileges: [
       {
         resource: { db: "MessengerDb", collection: "" },
-        actions: ["find", "insert", "update", "remove"],
+        actions: ["find", "insert", "update", "remove", 'listCollections'],
       },
     ],
     roles: [],
