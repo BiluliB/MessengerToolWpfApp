@@ -12,7 +12,7 @@ namespace MessengerToolWpfApp.ViewModels
     public class LoginViewModel
     {
         public ICommand OpenRegisterCommand { get; }
-        public Action CloseAction { get; set; } // Aktion zum Schließen des Fensters
+        public Action CloseAction { get; set; }
 
         public LoginViewModel()
         {
@@ -24,7 +24,7 @@ namespace MessengerToolWpfApp.ViewModels
             var registerWindow = new RegisterWindow();
             registerWindow.Show();
 
-            CloseAction?.Invoke(); // Schließt das Login-Fenster
+            CloseAction?.Invoke();
         }
     }
 
