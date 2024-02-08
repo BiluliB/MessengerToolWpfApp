@@ -5,13 +5,78 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MessengerToolWpfApp.Views"
         mc:Ignorable="d"
-        Title="MainView" Height="600" Width="800" WindowStartupLocation="CenterScreen">
-    <Grid>
-        <DockPanel>
-            <ListBox x:Name="UserList" DockPanel.Dock="Left" Width="200"/>
-            <Frame x:Name="ContentFrame" />
-        </DockPanel>
+        Title="Messenger" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+    <DockPanel LastChildFill="True">
+        <!-- Kontaktliste (Chats) -->
+        <ListBox x:Name="ChatList" DockPanel.Dock="Left" Width="200" Margin="5">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}" FontWeight="Bold" />
+                        <!-- Weitere Details können hier hinzugefügt werden -->
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
+        <!-- Chat-Nachrichtenbereich -->
+        <Grid DockPanel.Dock="Right" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
 
-    </Grid>
+            <!-- Nachrichtenverlauf -->
+            <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto">
+                <ItemsControl x:Name="MessageList">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="5">
+                                <TextBlock Text="{Binding Sender}" FontWeight="Bold" />
+                                <TextBlock Text="{Binding Message}" TextWrapping="Wrap" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+
+            <!-- Nachrichteneingabebereich -->
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Bottom"
+                        Margin="10">
+                <TextBox    x:Name="InputTextBox"
+                            MinWidth="500"
+                            MinHeight="30"
+                            MaxHeight="100"
+                            TextWrapping="Wrap"
+                            AcceptsReturn="True"
+                            VerticalScrollBarVisibility="Auto"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Center"
+                            BorderThickness="1"
+                            Padding="10,5"
+                            BorderBrush="Gray"
+                            Margin="0,0,10,0"/>        
+                <Button x:Name="SendButton"
+                        Width="30"
+                        Height="30"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        BorderThickness="0"
+                        Background="Transparent">
+                        <Button.Content>
+                            <Path Data="M0,0 L1,0 L0.5,1 Z"
+                                Fill="Black"
+                                Width="15"
+                                Height="15"
+                                Stretch="Fill"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"/>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+
+        </Grid>
+    </DockPanel>
 </Window>
