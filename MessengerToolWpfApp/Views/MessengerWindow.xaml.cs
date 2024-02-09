@@ -17,11 +17,16 @@ namespace MessengerToolWpfApp.Views
     /// <summary>
     /// Interaction logic for MainView.xaml
     /// </summary>
-    public partial class MainView : Window
+    public partial class MessengerWindow : Window
     {
-        public MainView()
+        public MessengerWindow()
         {
             InitializeComponent();
+        }
+
+        private void MessageInput_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

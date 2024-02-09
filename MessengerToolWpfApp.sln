@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessengerToolWpfApp", "MessengerToolWpfApp\MessengerToolWpfApp.csproj", "{B6AB80CF-4019-4B0E-A6BB-1A79E7D0D878}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessengerToolWpfApp", "MessengerToolWpfApp\MessengerToolWpfApp.csproj", "{B6AB80CF-4019-4B0E-A6BB-1A79E7D0D878}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessengerToolWebApplication", "MessengerToolWebApplication\MessengerToolWebApplication.csproj", "{9568CF18-B804-484C-8FA7-5DE4058B133F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B6AB80CF-4019-4B0E-A6BB-1A79E7D0D878}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6AB80CF-4019-4B0E-A6BB-1A79E7D0D878}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6AB80CF-4019-4B0E-A6BB-1A79E7D0D878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9568CF18-B804-484C-8FA7-5DE4058B133F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9568CF18-B804-484C-8FA7-5DE4058B133F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9568CF18-B804-484C-8FA7-5DE4058B133F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9568CF18-B804-484C-8FA7-5DE4058B133F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
